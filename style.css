@@ -1,0 +1,74 @@
+:root{
+  --blue:#0077cc;
+  --blue-dark:#005ea3;
+  --bg:#eaf4ff;
+  --card:#ffffff;
+  --text:#05324a;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  direction:rtl;
+}
+
+.container{max-width:1000px;margin:30px auto;padding:0 16px}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:22px;
+  box-shadow:0 6px 20px rgba(2,34,71,0.08);
+}
+
+.logo{width:140px;margin-bottom:12px}
+.logo-sm{width:60px;height:auto;vertical-align:middle}
+
+/* Welcome */
+main.center{max-width:420px;margin:60px auto;text-align:center}
+h1{margin:8px 0 6px;font-size:22px}
+.lead{color:rgba(5,50,74,0.8);margin-bottom:18px}
+.form{display:flex;flex-direction:column;gap:10px}
+.form input{padding:12px;border-radius:8px;border:1px solid #cfe7ff;background:#f9fcff}
+.form label{font-size:14px;text-align:right}
+.btn{
+  background:var(--blue);
+  color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600;text-decoration:none;
+}
+.btn:hover{background:var(--blue-dark)}
+.note{color:#486f92;font-size:13px;margin-top:12px}
+
+/* Topbar */
+.topbar{background:transparent;padding:10px 0}
+.topbar .container{display:flex;align-items:center;justify-content:space-between}
+.topbar h2{margin:0;font-size:18px}
+
+/* Student card */
+.student-card{padding:18px}
+.student-card h3{margin:0 0 6px}
+.student-card p{margin:0 0 12px;color:#32546a}
+
+/* Tabs */
+.tabs{display:flex;gap:8px;margin:12px 0}
+.tab-btn{
+  padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:#f6fbff;cursor:pointer;
+}
+.tab-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Tables */
+.data-table{width:100%;border-collapse:collapse;margin-top:12px}
+.data-table th,.data-table td{padding:10px;border-bottom:1px solid #eef6ff;text-align:right}
+.data-table th{background:#f1f9ff;color:var(--blue);font-weight:700}
+
+/* Responsive */
+@media (max-width:600px){
+  .container{padding:10px}
+  main.center{margin:30px 12px}
+  .data-table th,.data-table td{padding:8px;font-size:14px}
+}

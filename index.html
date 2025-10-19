@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ثانوية الشرقاط للمتفوقين</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card center">
+    <img src="assets/logo.png" alt="شعار ثانوية الشرقاط" class="logo" />
+    <h1>ثانوية الشرقاط للمتفوقين</h1>
+    <p class="lead">أهلاً! أدخل كود الطالب حتى تشوف بياناته (الحضور والدرجات)</p>
+
+    <form id="loginForm" class="form">
+      <label for="code">كود الطالب</label>
+      <input id="code" name="code" type="text" placeholder="مثال: 101" required />
+      <button type="submit" class="btn">دخول</button>
+    </form>
+
+    <p class="note">لو ما تعرف الكود، اسأل الإدارة حتى يوفّروه</p>
+  </main>
+
+  <script>
+    // حفظ الكود بالمحلي وفتح student.html
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const code = document.getElementById('code').value.trim();
+      if(!code) return;
+      localStorage.setItem('studentCode', code);
+      window.location.href = 'student.html';
+    });
+  </script>
+</body>
+</html>
